@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 
 def pytest_addoption(parser):
-    parser.addoption('--language', action='store', default="es",
+    parser.addoption('--language', action='store', default="en",
                      help="Choose language")
 @pytest.fixture(scope="function")
 def browser(request):
@@ -25,3 +25,4 @@ def browser(request):
     yield browser
     print("\nquit browser..")
     browser.quit()
+# pytest -v --tb=line --language=en test_main_page.py
