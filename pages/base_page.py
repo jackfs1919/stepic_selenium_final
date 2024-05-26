@@ -1,6 +1,4 @@
 from selenium.common.exceptions import NoSuchElementException, NoAlertPresentException, TimeoutException
-from selenium.webdriver.support.ui import Select, WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import math
 class BasePage():
     def __init__(self, browser, url, timeout=10):
@@ -25,7 +23,6 @@ def solve_quiz_and_get_code(self):
     alert.send_keys(answer)
     alert.accept()
     try:
-        WebDriverWait(self.browser, 3).until(EC.alert_is_present())
         alert = self.browser.switch_to.alert
         alert_text = alert.text
         print(f"Your code: {alert_text}")
