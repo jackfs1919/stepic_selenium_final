@@ -26,5 +26,5 @@ def browser(request):
     yield browser
     print("\nquit browser..")
     browser.quit()
-    os.system("taskkill /fi 'imagename eq chrome.exe' /f")
+    os.system("taskkill /im chrome.exe /f")
 # pytest -v --tb=line --language=en test_main_page.py
