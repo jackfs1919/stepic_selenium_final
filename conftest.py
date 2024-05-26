@@ -1,3 +1,4 @@
+import os
 import pytest
 from selenium import webdriver
 
@@ -25,4 +26,5 @@ def browser(request):
     yield browser
     print("\nquit browser..")
     browser.quit()
+    os.system("taskkill /fi 'imagename eq chrome.exe' /f")
 # pytest -v --tb=line --language=en test_main_page.py
