@@ -3,3 +3,5 @@ class MainPageLocators():
 class LoginPageLocators():
     LOGIN_FORM = ('xpath', '//form[@id = "login_form"]')
     REGISTER_FORM = ('xpath', '//form[@id = "register_form"]')
+class ProductPageLocators():
+    ADD_BUTTON = ('xpath', '//button[@id = "id_quantity"]')
