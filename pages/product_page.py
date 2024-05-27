@@ -13,5 +13,8 @@ class ProductPage(BasePage):
 
     def should_be_product_button(self):
         assert self.is_element_present(*ProductPageLocators.ADD_BUTTON), "Нет кнопки добавления в корзину"
+    def add_product_to_basket(self):
+        self.browser.find_element(*ProductPageLocators.ADD_BUTTON).click()
+        self.solve_quiz_and_get_code()
 
 
