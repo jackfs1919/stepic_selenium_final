@@ -1,4 +1,3 @@
-import time
 
 from .pages.main_page import BasePage
 from .pages.login_page import LoginPage
