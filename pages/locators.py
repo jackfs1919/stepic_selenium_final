@@ -1,6 +1,7 @@
 class BasePageLocators:
     LOGIN_LINK = ('css selector', "#login_link")
     BASKET_BUTTON = ('css selector', "span[class='btn-group'] a")
+    LOGIN_LINK_INVALID = ('css selector', "#login_link_inc")
 class MainPageLocators():
     LOGIN_LINK = ('css selector', "#login_link")
 class LoginPageLocators():
